@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/Nandini9107/portfolio-backend/issues"
   },
-  "homepage": "https://github.com/Nandini9107/portfolio-backend#readme"
+  "homepage": "https://github.com/Nandini9107/portfolio-backend#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mongoose": "^9.5.0"
+  }
 }

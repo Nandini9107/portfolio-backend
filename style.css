@@ -1,0 +1,19 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #111;
+    color: white;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 10px;
+    border-radius: 10px;
+}

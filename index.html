@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nandini | Portfolio</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #0f172a, #050816);
+    color: #e5e7eb;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    background: rgba(10, 14, 25, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 1000;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: 700;
+    color: white;
+}
+
+.hero span {
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #94a3b8;
+    font-size: 18px;
+}
+
+/* SECTION TITLE */
+section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* PROJECTS */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+/* CARD (PREMIUM + COLOR ACCENT) */
+.card {
+    width: 280px;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow effect */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 60%);
+    transform: rotate(25deg);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #38bdf8;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 12px;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: white;
+}
+
+/* SKILLS */
+.skills {
+    color: #94a3b8;
+    font-size: 17px;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero" id="home">
+<h1>Hi, I'm <span>Nandini</span> 🚀</h1>
+<p>Full-Stack Developer | Crafting modern web experiences</p>
+</div>
+
+<section id="projects">
+<h2>✨ Projects</h2>
+
+<div class="container">
+<div class="card">
+<h3>🌿 Skincare App</h3>
+<p>Modern UI skincare landing page</p>
+<button class="btn">Live</button>
+</div>
+
+<div class="card">
+<h3>📊 Sorting Visualizer</h3>
+<p>Algorithm visualization tool</p>
+<button class="btn">Code</button>
+</div>
+
+<div class="card">
+<h3>💬 Social UI</h3>
+<p>Interactive social media design</p>
+<button class="btn">Live</button>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<h2>⚡ Skills</h2>
+<p class="skills">
+HTML · CSS · JavaScript · Node.js · Express · MongoDB · UI Design
+</p>
+</section>
+
+<section id="contact">
+<h2>📩 Contact</h2>
+<p class="skills">Let’s build something amazing 🚀</p>
+</section>
+
+<footer>
+Built with passion · Full Stack Developer Portfolio
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

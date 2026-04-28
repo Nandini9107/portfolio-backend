@@ -8,13 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ MONGODB CONNECTION
-mongoose.connect("mongodb://127.0.0.1:27017/portfolioDB")
+// MongoDB Atlas Connection
+mongoose.connect("mongodb+srv://portfolioUser:strongDB12@cluster0.rosxyvy.mongodb.net/portfolioDB?retryWrites=true&w=majority")
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
-
-
-// ✅ STEP 7: ADD THESE ROUTES HERE 👇
 
 // GET all projects
 app.get("/api/projects", async (req, res) => {
@@ -29,8 +26,7 @@ app.post("/api/projects", async (req, res) => {
     res.json(project);
 });
 
-
-// SERVER START
+// Add sample data
 app.get("/add-data", async (req, res) => {
     await Project.create({
         title: "Skincare App",
@@ -46,6 +42,8 @@ app.get("/add-data", async (req, res) => {
 
     res.send("Data added successfully");
 });
+
+// Server start
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

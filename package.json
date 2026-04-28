@@ -1,12 +1,14 @@
 {
   "name": "portfolio-backend",
   "version": "1.0.0",
+  "description": "Portfolio Backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
     "express": "^5.2.1",
+    "body-parser": "^2.2.2",
     "cors": "^2.8.6",
     "mongoose": "^9.5.0"
   }
